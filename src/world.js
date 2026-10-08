@@ -407,7 +407,9 @@ export function createWorld(scene) {
   for (const [mat, geometries] of batches) {
     const merged = mergeGeometries(geometries, false);
     const mesh = new THREE.Mesh(merged, mat);
-    mesh.castShadow = true;
+    mesh.castShadow = ![ground, asphalt, sidewalk, curb, line, white].includes(
+      mat,
+    );
     mesh.receiveShadow = true;
     scene.add(mesh);
     geometries.forEach((g) => g.dispose());

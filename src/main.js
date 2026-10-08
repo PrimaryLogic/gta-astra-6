@@ -66,7 +66,7 @@ sunlight.shadow.camera.bottom = -110;
 sunlight.shadow.camera.near = 1;
 sunlight.shadow.camera.far = 450;
 sunlight.shadow.normalBias = 0.08;
-sunlight.shadow.bias = -0.0002;
+sunlight.shadow.bias = -0.0006;
 scene.add(sunlight);
 scene.add(sunlight.target);
 createWorld(scene);
